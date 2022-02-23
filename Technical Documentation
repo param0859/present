@@ -1,1 +1,18 @@
 
+Salesforce Deliverable: 
+
+Part 1: 
+On Contact Object, I created a field Account_Industry__c which is a text field. Since we need to consider any creation or updated on Contact record, and need to make sure there is an account present, I added this in the after update and after insert method. 
+
+
+Part 2: 
+On Account object, I created a custom field, Number_Of_Contacts__c, which is a number field. 
+The batch job implemented can be scheduled through apex to update the Number of Contacts on each Account. 
+
+Can be scheduled so it runs everyday through Scheduled Apex or through script. 
+
+
+Part 3: 
+This is partially completed to the best of my ability. 
+I fetched the fields from Account and showing on the page the value from the Account record selected. 
+
