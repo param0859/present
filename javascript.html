@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+      // Do not use jQuery or any other libraries for these JavaScript questions.
+
+      // Q1) Complete this function that receives an array of numbers and returns the sum of the values in the array.
+      function sumNumberArray(numArray) {
+
+
+for (let i = 0; i < numArray.length; i++) {
+    sum += numArray[i];
+}
+return sum;
+
+			}
+
+      //The following questions below will use this array of Contact objects
+      var contacts = [
+        { account: "Acme", firstName: "John", lastName: "Snow" },
+        { account: "Metal Industries", firstName: "Ted", lastName: "Smith" },
+        { account: "Acme", firstName: "Sara", lastName: "Butler" },
+        { account: "HiTech Corp", firstName: "Sam", lastName: "Johnson" },
+        { account: "HiTech Corp", firstName: "Arnold", lastName: "Williams" },
+        { account: "Metal Industries", firstName: "Jessica", lastName: "Westcoat" },
+        { account: "Acme", firstName: "Kyle", lastName: "Johnson" },
+        { account: "HiTech Corp", firstName: "Jason", lastName: "Fernandez" },
+      ];
+
+      //Given the code below.....
+      var contact = contacts[0];
+      contact.firstName = "Scott";
+
+      // Q2 ) What is the value of contacts[0].firstName? Why?
+      Value of contacts[0].firstName is originally John, when we assign the value of Scott, the latest value is now Scott. 
+
+
+      //Similarly, given the following array of numbers
+      var numberArray = [3, 44, 64];
+      var num = numberArray[0];
+      num = 13;
+
+      // Q3) What will be the value of numberArray[0]? Why?
+      Value of numberArray[0] is originally 3, however, once we assign num = 13 to the 0th index, the value will now output 13. 
+
+
+
+      // Q4) Complete the convertAccountArrayToObject() function below that accepts an array like 'contacts' above and
+      // returns an object with the following object structure below where the key is account name and value is an array of alphabetized full names
+      var acctContactObject = {
+        Acme: ["John Snow", "Kyle Johnson", "Sara Butler"],
+        "HiTech Corp": ["Arnold Williams", "Jason Fernandez", "Sam Johnson"],
+        "Metal Industries": ["Jessica Westcoat", "Ted Smith"],
+      };
+
+      function convertAccountArrayToObject(contacts) {
+        //Return an object structured like the 'acctContactObject' object above
+
+        We can utilize the sort function to alphabetize the fullnames 
+
+      };
+
+
+      }
+
+      // Q5) See the question in the call back function
+      function getContacts() {
+        var accountId = "123abc";
+
+        $.get("ajax/contacts.json?id=" + accountId, function (data) {
+          //This is an asynchronous callback function
+          //This is inside an anonymous function executing asynchronously in a seperate context but it still has the ability to read the value
+          // in the 'accountId' var. Why?
+
+          Due to the OWD settings, there might be sharing rules which are giving read permissions, the code is running in the context of the user. 
+
+          console.log("I see you " + accountId);
+        });
+      }
+
+      // Q6) What is the difference between the == operator and the === operator? Give an example of why may use one instead of the other.
+      == in JavaScript is used for comparing two variables, but it ignores the datatype of variable.
+      === is used for comparing two variables, but this operator also checks datatype and compares two values.
+      console.log('hello' === 'hello');
+      //True 
+
+
+      // Q7) What will the output of the following function be? You can easily run this function and see the output but also explain why?
+      function doTimeouts() {
+        console.log(1);
+        setTimeout(function () {
+          console.log(2);
+        }, 1000);
+        setTimeout(function () {
+          console.log(3);
+        }, 0);
+        console.log(4);
+      }
+
+      This does not output anything as it is setting a timeout.
+      setTimeout(function, milliseconds)
+      Executes a function, after waiting a specified number of milliseconds.
+
+
+      // Q8) JavaScript includes basic string functions like toLowerCase() and toUpperCase(). JavaScript provides a mechanism to attach 
+			// custom methods to core objects like String. Do what is necessary to make the commented line below work and output the reversed 
+			// value of the 'productName' var.
+
+      var productName = "Smartsheet";
+      const myArray = productName.split("");
+      // Would look to convert productName into an array 
+      
+      var newString = ""; 
+        for (var i = myArray.length - 1; i >= 0; i--) { 
+        newString += myArray[i]; 
+    }
+
+      console.log(newString);
+    </script>
+  </head>
+  <body>
+    <p>View the source code of this page and answer the questions/complete the code.</p>
+  </body>
+</html>

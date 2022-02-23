@@ -1,0 +1,86 @@
+<html>
+	<head>
+
+		<style type="text/css">
+			/* Add styles here */
+		body
+		{
+    		font-family: Arial;
+		}
+
+
+.btn {
+  background-color: #808080;
+  border-radus: 50%;
+  padding: 10px;
+
+}
+
+.btn:hover {
+  background-color: #505050;
+}
+
+#bodyWrapper{
+	max-width: 1024px;
+}
+
+.accountList{
+	color: green;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+
+
+.accountList .alert{
+	background-color: red;
+}
+
+.alert{
+	background-color: orange;
+}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- Give the entire document some nicer font -->
+
+		<div id="bodyWrapper" align="center">
+			This div should align in the center of the page and never be wider than 1024px
+
+			<span class="btn">
+				Click me!
+				<!--
+				This should be grey with rounded corders
+				It should have some nice spacing between the text and the outside of the button
+				On mouse hover it should be slightly darker grey
+				When depressed or clicked it should be very dark grey but font should still be readable
+				For each state, the border should be a slightly darker color than the background
+				-->
+			</span>
+
+			<br/>
+			<br/>
+
+			<div class="accountList">
+				<!-- Default color of all these divs should be some shade of green, do not add any additional class names -->
+				<!-- Each div should also have a nice soft drop shadow and adequate spacing between each item to show this shadow -->
+				<div>Acme</div>
+				<div class="alert">Widgets Inc. <!--background should be red, do not change the class name from 'alert'--></div>
+				<div>Gears and Bearings</div>
+				<div>Computer City</div>
+			<div>
+
+			<br/>
+			<br/>
+
+			<div class="alert">
+				<!--background should be orange, do not change the class name from 'alert'-->
+				Uh oh, something broke
+			</div>
+
+		</div>
+	</body>
+</html>
